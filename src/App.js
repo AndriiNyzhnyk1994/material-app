@@ -5,9 +5,6 @@ function App() {
   return (
     <div className="App">
       Hi
-      <IconButton>
-        <Delete/>
-      </IconButton>
     </div>
   );
 }
