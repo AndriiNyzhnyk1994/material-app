@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import './App.css';
 import { ListWithClasses } from './ListWithClasses';
+import { ListWithFunction } from './ListWithFunction';
 
 
 function App() {
@@ -24,8 +25,8 @@ function App() {
 
   return (
     <div className="App">
-      <button onClick={toggleVisibleList}>switch</button>
-      {visibleList && <ListWithClasses/>}
+      <button onClick={toggleVisibleList}>Show/Hide</button>
+      {visibleList && <ListWithFunction />}
     </div>
   )
 }
