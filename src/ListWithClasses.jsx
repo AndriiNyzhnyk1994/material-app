@@ -2,7 +2,6 @@ import React from "react";
 
 
 
-
 export class ListWithClasses extends React.Component {
     state = {
         numbers: [1, 2, 4]
