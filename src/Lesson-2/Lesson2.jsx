@@ -5,7 +5,9 @@ import React, { useCallback, useEffect, useRef, useState } from 'react'
 export function Lesson2() {
 
     const [numbers, setNumbers] = useState([1, 2, 3, 4, 5])
-    // const ulRef = React.useRef()
+
+   
+    // ------------------- PART 1 ---------------
 
     let ulRef = useRef()
     // useRef saves a link to DOM element by atribute ref
@@ -13,8 +15,7 @@ export function Lesson2() {
     // useRef can keep it link through renders 
 
     const addNumber = () => {
-        const lastNumber = numbers[numbers.length - 1]
-        setNumbers([...numbers, lastNumber + 1])
+        setNumbers( prev => [...prev, prev[prev.length - 1] + 1])
     }
 
     const handleScroll = useCallback(() => {
@@ -29,9 +30,22 @@ export function Lesson2() {
         ulRef.current.addEventListener('scroll', handleScroll)
     }, [])
 
+    // ------------------- PART 2 ---------------
+    
+    const timerRef = useRef()
+    const start = () => {
+        timerRef.current = setInterval(addNumber, 1000)
+    }
+    const stop = () => {
+        console.log(timerRef.current);
+        clearInterval(timerRef.current)
+    }
+
+
     return (
         <div >
             <h2>Lesson2</h2>
+            <h3>Part 1</h3>
             <button onClick={addNumber}>add item</button>
             <button onClick={removeScroll}>remove scroll</button>
             <ul ref={ulRef} style={{ overflow: 'scroll', height: '200px' }} >
@@ -41,6 +55,9 @@ export function Lesson2() {
                     )
                 })}
             </ul>
+            <h3>Part 2</h3>
+            <button onClick={start}>START</button>
+            <button onClick={stop}>STOP</button>
         </div>
     )
 }
