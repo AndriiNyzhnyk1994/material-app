@@ -1,6 +1,7 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react'
 import { UseRefDocs } from './UseRefDocs'
 import { UseRefDocs3 } from './UseRefDocs3'
+import { UseRefDocs4 } from './UseRefDocs4'
 
 // useRef
 
@@ -62,7 +63,8 @@ export function Lesson2() {
             <h3>Part 3</h3>
             {/* <UseRefDocs/> */} 
             {/* <UseRefDocs2/> */}
-            <UseRefDocs3/>
+            {/* <UseRefDocs3/> */}
+            <UseRefDocs4/>
         </div>
     )
 }

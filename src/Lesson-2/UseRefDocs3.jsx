@@ -14,7 +14,6 @@ export function UseRefDocs3() {
         })
     }
 
-
     return (
         <div>
             <h4>Scrolling an image into view on click</h4>
