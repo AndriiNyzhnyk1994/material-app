@@ -1,4 +1,6 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react'
+import { UseRefDocs } from './UseRefDocs'
+import { UseRefDocs3 } from './UseRefDocs3'
 
 // useRef
 
@@ -40,8 +42,7 @@ export function Lesson2() {
         console.log(timerRef.current);
         clearInterval(timerRef.current)
     }
-
-
+    
     return (
         <div >
             <h2>Lesson2</h2>
@@ -58,6 +59,10 @@ export function Lesson2() {
             <h3>Part 2</h3>
             <button onClick={start}>START</button>
             <button onClick={stop}>STOP</button>
+            <h3>Part 3</h3>
+            {/* <UseRefDocs/> */} 
+            {/* <UseRefDocs2/> */}
+            <UseRefDocs3/>
         </div>
     )
 }
